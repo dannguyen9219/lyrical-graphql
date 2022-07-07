@@ -15,11 +15,10 @@ const CONFIG = {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 };
-// const MONGO_URI = `mongodb+srv://dannguyen9219:PiALF14gBNsaCZ13@lyricalgraphql.yozehjv.mongodb.net/?retryWrites=true&w=majority`;
 
 if (!DATABASE_URL) {
   throw new Error('You must provide a MongoDB URI!');
-}
+};
 
 mongoose.Promise = global.Promise;
 mongoose.connect(DATABASE_URL, CONFIG);
